@@ -14,6 +14,10 @@ import { RecipeDetailComponent } from './recipe-book/recipe-detail/recipe-detail
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { FormsModule } from '@angular/forms';
+import { ExercisesComponent } from './exercises/exercises.component';
+import { GamecontrolComponent } from './exercises/gamecontrol/gamecontrol.component';
+import { OddComponent } from './exercises/odd/odd.component';
+import { EvenComponent } from './exercises/even/even.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { FormsModule } from '@angular/forms';
     RecipeItemComponent,
     RecipeDetailComponent,
     CockpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    ExercisesComponent,
+    GamecontrolComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,

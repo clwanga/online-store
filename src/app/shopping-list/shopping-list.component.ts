@@ -12,5 +12,12 @@ export class ShoppingListComponent {
     new Ingredients("Tomato", 5)
   ];
 
+  ReceiveName:string;
+  ReceivedAmount:number;
+
   constructor(){}
+
+  populateIngredientsArray(){
+    this.ingredients.push(new Ingredients(this.ReceiveName, this.ReceivedAmount));
+  }
 }

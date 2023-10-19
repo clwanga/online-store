@@ -1,30 +1,10 @@
-<app-header>Header</app-header>
+<app-header (valueClicked)="clickedValue($event)">Header</app-header>
 <div class="container">
-  <app-cockpit
-    (serverCreated)="onServerAdded($event)"
-    (blueprintCreated)="onBlueprintAdded($event)"
-  ></app-cockpit>
   <div class="row">
-    <!-- <div class="col-md-12">
-      <app-recipe-book></app-recipe-book>
-      <app-shopping-list></app-shopping-list>
-    </div> -->
-    <div class="col-xs-12">
-      <app-server-element
-        *ngFor="let item of serverElements"
-        [srvElement]="item"
-      >
-        <p>
-          <strong *ngIf="item.type === 'server'" style="color: red">{{
-            item.content
-          }}</strong>
-          <em
-            *ngIf="item.type === 'blueprint'"
-            style="color: rgb(20, 76, 121)"
-            >{{ item.content }}</em
-          >
-        </p>
-      </app-server-element>
+    <div class="col-md-12">
+      <app-recipe-book *ngIf="somevalue == 'Recipes'"></app-recipe-book>
+      <app-shopping-list *ngIf="somevalue == 'ShoppingList'"></app-shopping-list>
     </div>
+
   </div>
 </div>

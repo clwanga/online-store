@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   //properties
   title = 'online-store';
+  receivedCount: number = 0;
+  somevalue:string = "Recipes";
   
   serverElements = [{
     type: 'blueprint',
@@ -30,5 +32,13 @@ export class AppComponent {
       name: serverData.serverName,
       content: serverData.serverContent
     });
+  }
+
+  getCount(value: number){
+    this.receivedCount = value;
+  }
+
+  clickedValue(receivedValue: string){
+    this.somevalue = receivedValue;
   }
 }
