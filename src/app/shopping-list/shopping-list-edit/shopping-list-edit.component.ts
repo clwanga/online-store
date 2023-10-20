@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Ingredients } from 'src/app/shared/ingredient.model';
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -10,12 +11,16 @@ export class ShoppingListEditComponent {
   @ViewChild("ItemAmount") Amount: ElementRef
 
   //output variables
-  @Output() nameObtained = new EventEmitter<string>();
-  @Output() amountObtained = new EventEmitter<string>();
+  @Output() valuesObtained = new EventEmitter<Ingredients>();
+
 
   //method
   AddItem(){
-    this.nameObtained.emit(this.Name.nativeElement.value);
-    this.amountObtained.emit(this.Amount.nativeElement.value);
+    let ingName = this.Name.nativeElement.value;
+    let ingAmount = this.Amount.nativeElement.value;
+
+    var ingredient = new Ingredients(ingName, ingAmount);
+    this.valuesObtained.emit(ingredient);
+    
   }
 }

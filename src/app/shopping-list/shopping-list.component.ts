@@ -17,7 +17,7 @@ export class ShoppingListComponent {
 
   constructor(){}
 
-  populateIngredientsArray(){
-    this.ingredients.push(new Ingredients(this.ReceiveName, this.ReceivedAmount));
+  populateIngredientsArray(ingredient: Ingredients): void{
+    this.ingredients.push(new Ingredients(ingredient.name,ingredient.amount));
   }
 }
