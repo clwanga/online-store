@@ -18,6 +18,9 @@ import { ExercisesComponent } from './exercises/exercises.component';
 import { GamecontrolComponent } from './exercises/gamecontrol/gamecontrol.component';
 import { OddComponent } from './exercises/odd/odd.component';
 import { EvenComponent } from './exercises/even/even.component';
+import { Background } from './Directives/SetBackground.directive';
+import { BetterDirectiveDirective } from './Directives/better-directive.directive';
+import { ButtonToggleDirective } from './Directives/button-toggle.directive';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { EvenComponent } from './exercises/even/even.component';
     ExercisesComponent,
     GamecontrolComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    Background,
+    BetterDirectiveDirective,
+    ButtonToggleDirective
   ],
   imports: [
     BrowserModule,
